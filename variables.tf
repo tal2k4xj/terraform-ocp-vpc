@@ -1,6 +1,7 @@
 variable "region" {
   type = string
   description = "The IBM Cloud region where the cluster will be/has been installed."
+  default = "eu-gb"
 }
 variable "ibmcloud_api_key" {
   type = string
@@ -9,12 +10,12 @@ variable "ibmcloud_api_key" {
 variable "cluster_name" {
   type = string
   description = "The name of the cluster that will be created within the resource group"
-  default = ""
+  default = "talne-ocp-cluster"
 }
 variable "worker_count" {
   type = number
   description = "The number of worker nodes that should be provisioned for classic infrastructure"
-  default = 3
+  default = 2
 }
 variable "cluster_flavor" {
   type = string
@@ -54,7 +55,7 @@ variable "cluster_force_delete_storage" {
 variable "cluster_tags" {
   type = string
   description = "Tags that should be added to the instance"
-  default = "[]"
+  default = "[talne]"
 }
 variable "cluster_kms_enabled" {
   type = bool
@@ -89,6 +90,7 @@ variable "ibm-vpc-gateways_provision" {
 variable "resource_group_name" {
   type = string
   description = "The name of the resource group"
+  default = "default"
 }
 variable "resource_group_sync" {
   type = string
@@ -103,7 +105,7 @@ variable "cos_resource_location" {
 variable "cos_tags" {
   type = string
   description = "Tags that should be applied to the service"
-  default = "[]"
+  default = "[talne]"
 }
 variable "cos_plan" {
   type = string
@@ -118,7 +120,7 @@ variable "cos_provision" {
 variable "cos_label" {
   type = string
   description = "The name that should be used for the service, particularly when connecting to an existing service. If not provided then the name will be defaulted to {name prefix}-{service}"
-  default = "cos"
+  default = "talne-cos"
 }
 variable "ibm-vpc-subnets_zone_offset" {
   type = number
@@ -128,12 +130,12 @@ variable "ibm-vpc-subnets_zone_offset" {
 variable "ibm-vpc-subnets__count" {
   type = number
   description = "The number of subnets that should be provisioned"
-  default = 3
+  default = 2
 }
 variable "ibm-vpc-subnets_label" {
   type = string
   description = "Label for the subnets created"
-  default = "default"
+  default = "talne-subnet"
 }
 variable "ibm-vpc-subnets_ipv4_cidr_blocks" {
   type = string
@@ -158,7 +160,7 @@ variable "ibm-vpc-subnets_acl_rules" {
 variable "ibm-vpc_name" {
   type = string
   description = "The name of the vpc instance"
-  default = ""
+  default = "talne-vpc"
 }
 variable "ibm-vpc_provision" {
   type = bool
