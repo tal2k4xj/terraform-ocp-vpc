@@ -55,7 +55,7 @@ variable "cluster_force_delete_storage" {
 variable "cluster_tags" {
   type = string
   description = "Tags that should be added to the instance"
-  default = "[talne]"
+  default = "[]"
 }
 variable "cluster_kms_enabled" {
   type = bool
@@ -105,7 +105,7 @@ variable "cos_resource_location" {
 variable "cos_tags" {
   type = string
   description = "Tags that should be applied to the service"
-  default = "[talne]"
+  default = "[]"
 }
 variable "cos_plan" {
   type = string
