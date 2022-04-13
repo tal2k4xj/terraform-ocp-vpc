@@ -15,7 +15,7 @@ variable "cluster_name" {
 variable "worker_count" {
   type = number
   description = "The number of worker nodes that should be provisioned for classic infrastructure"
-  default = 2
+  default = 1
 }
 variable "cluster_flavor" {
   type = string
@@ -130,7 +130,7 @@ variable "ibm-vpc-subnets_zone_offset" {
 variable "ibm-vpc-subnets__count" {
   type = number
   description = "The number of subnets that should be provisioned"
-  default = 1
+  default = 2
 }
 variable "ibm-vpc-subnets_label" {
   type = string
