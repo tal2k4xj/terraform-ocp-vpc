@@ -10,7 +10,7 @@ variable "ibmcloud_api_key" {
 variable "cluster_name" {
   type = string
   description = "The name of the cluster that will be created within the resource group"
-  default = "talne-ocp-cluster"
+  default = "talnee-ocp-cluster"
 }
 variable "worker_count" {
   type = number
@@ -120,7 +120,7 @@ variable "cos_provision" {
 variable "cos_label" {
   type = string
   description = "The name that should be used for the service, particularly when connecting to an existing service. If not provided then the name will be defaulted to {name prefix}-{service}"
-  default = "talne-cos"
+  default = "talnee-cos"
 }
 variable "ibm-vpc-subnets_zone_offset" {
   type = number
@@ -135,7 +135,7 @@ variable "ibm-vpc-subnets__count" {
 variable "ibm-vpc-subnets_label" {
   type = string
   description = "Label for the subnets created"
-  default = "talne-subnet"
+  default = "talnee-subnet"
 }
 variable "ibm-vpc-subnets_ipv4_cidr_blocks" {
   type = string
@@ -160,7 +160,7 @@ variable "ibm-vpc-subnets_acl_rules" {
 variable "ibm-vpc_name" {
   type = string
   description = "The name of the vpc instance"
-  default = "talne-vpc"
+  default = "talnee-vpc"
 }
 variable "ibm-vpc_provision" {
   type = bool
